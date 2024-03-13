@@ -1,5 +1,5 @@
-M140 S60
-M104 S220
+M140 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
 G90
 M83
 G1 X0 Z0.15 F1200 ;start cleaning nozzle before leveling
