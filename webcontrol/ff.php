@@ -88,7 +88,7 @@ echo "<table border=1 style='width:100%'>";
 echo "<tr><td colspan=3 style='width:33%' align=center>Temperature </td> <td colspan=2 style='width:33%' align=center>Progres</td><td style='width:33%' align=center>Control</td> </tr>";
 echo "<tr><td>        </td><td> SET           </td><td> NOW          </td><td> File: </td><td>  $file    </td><td>State:  $stav        </td></tr>";    
 echo "<tr><td>HOTEND  </td><td> $temp_hes °C  </td><td> $temp_he °C  </td><td> Done:  </td><td> $hotovo % </td><td>          </td></tr>";
-echo "<tr><td>BED     </td><td> $temp_beds °C </td><td> $temp_bed °C </td><td> Layer: </td><td>  $layer   </td><td><form action='ff.php' method='post'>
+echo "<tr><td>BED     </td><td> $temp_beds °C </td><td> $temp_bed °C </td><td> Layer: </td><td>  $layer   </td><td><form action='ff.php?ip=$address' method='post'>
     <button type='submit' name='LED' value='SWITCH' >LED</button><button type='submit' name='PAUSE' value='ON' >PAUSE</button><button type='submit' name='RESUME' value='ON' >RESUME</button><button type='submit' name='STOP' value='ON' >CANCEL</button><button type='submit' name='HOME' value='ON' >HOME</button>
 </form></td></tr>";    
     
