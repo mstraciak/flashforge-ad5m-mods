@@ -1,1 +1,2 @@
 Start G-code, End G-code, and Change filament G-code for Flashforge Adventurer 5M with 3D chameleon.
+Position of switch is in the middle on the left side. 
