@@ -1,0 +1,89 @@
+; Auto generated 3D Chameleon Mk4 Tool Change GCode for PrusaSlicer
+
+; - 3D Chameleon Mk4 Tool T{next_extruder} -
+;begin switch from extruder {previous_extruder} to extruder #{next_extruder}
+M117 Unloading Tool T[previous_extruder]
+M83 ; turn relative distances for the extruder
+
+; unload extruder {previous_extruder}
+G92 E0
+
+; go to holding position to unload the stock extruder
+G0 Y0 X-100 F6000  ; <<----- EDIT THIS LINE TO SET THE INITIAL LOCATION OF THE BUTTON
+
+; if this is the first load, then don't unload
+G91 ; move to relative mode
+M83
+
+; load extruder #{next_extruder}
+M117 Loading Tool T{next_extruder}
+
+{if previous_extruder>-1}
+; back out the filament for cutting
+G0 E-50 F800 ; retract a bit, adjust this to tune waste
+; <<<< insert mechanical cutter code here! >>>>
+; we skipped to here if it was extruder -1
+{endif}
+
+{if previous_extruder>-1}
+; retract it back out of the extrude
+;G0 E47 F2000 ; <<<---- if mechanical cutter, change to a positive value of at least 5mm
+G92 E0
+; ok - out of extruder - press button to remove it all the way
+G91 ; move to relative mode
+M82
+; we skipped to here if it was extruder -1
+{endif}
+
+; press the button to select the new extruder
+G0 X-10 F6000
+
+{if next_extruder==0}
+G4 P600 ; dwell for .5 seconds - adjust this to match your machines single pulse time
+{endif}
+{if next_extruder==1}
+G4 P1200 ; dwell for 1.0 seconds - adjust this to match your machines two pulse time
+{endif}
+{if next_extruder==2}
+G4 P1700 ; dwell for 1.5 seconds - adjust this to match your machines three pulse time
+{endif}
+{if next_extruder==3}
+G4 P2200 ; dwell for 2.0 seconds - adjust this to match your machines four pulse time
+{endif}
+G0 X10
+
+G4 P2500 ; wait for cutter to work
+
+; ok command selected - back out filament if needed after cut
+{if previous_extruder>-1}
+G0 X-10 F6000 ; 
+G4 P2500 ;
+G0 X10;
+G4 P400
+{endif}
+
+G92 E0
+G0 E65 F600 ; vytlac hovienko, aby mohol nasat novy filament
+G4 P2000
+G92 E0
+G4 P600
+
+G0 X-10 F6000 ; nasava novy filament
+G4 P1000
+G0 E78 F1500;
+;G4 P1200 ;
+G0 X10;
+G4 P400
+
+G92 E0
+G90 ; move back to absolute mode
+M83 ; but make sure the extruder stays in relative
+; reload filament all the way into extruder
+
+;G92 E0
+;G0 E50 F2000 ; <<<<<-----------  EDIT THIS DISTANCE TO FINE TUNE THE FILAMENT LOADING TO STOP BLOBBING OR UNDEREXTRUSION
+G92 E0
+
+M83 ; turn relative distances for the extruder
+M302 S180 ; prevent cold extrusion
+M117 3D Chameleon Tool T{next_extruder}
