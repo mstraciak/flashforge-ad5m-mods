@@ -24,7 +24,7 @@ G4 P1000 ;caka 150ms
 
 G0 Y0 X-110 F6000 ;stlacenie tlacidla pre zasunutie filamentu T0
 G4 P1000
-G1 E78 F1500
+G1 E76 F1500 ;old value 78mm
 ;G4 P2000
 G0 Y0 X-100 F3000 ;presun k tlacidlu
 G1 E30 F400
