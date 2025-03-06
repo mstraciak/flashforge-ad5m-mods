@@ -27,7 +27,7 @@ G0 E-50 F800 ; retract a bit, adjust this to tune waste
 
 {if previous_extruder>-1}
 ; retract it back out of the extrude
-;G0 E47 F2000 ; <<<---- if mechanical cutter, change to a positive value of at least 5mm
+;G0 E48 F2000 ; <<<---- original value 47mm
 G92 E0
 ; ok - out of extruder - press button to remove it all the way
 G91 ; move to relative mode
@@ -70,7 +70,7 @@ G4 P600
 
 G0 X-10 F6000 ; nasava novy filament
 G4 P1000
-G0 E78 F1500;
+G0 E76 F1500 ;old value 78mm
 ;G4 P1200 ;
 G0 X10;
 G4 P400
