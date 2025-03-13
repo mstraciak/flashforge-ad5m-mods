@@ -20,7 +20,6 @@ BED_MESH_CALIBRATE
 M190 S[bed_temperature_initial_layer_single]
 M109 S[nozzle_temperature_initial_layer]
 
-
 M221 S95
 G90
 M83
@@ -30,7 +29,6 @@ G0 Y0 X-110 F6000 ;push
 G4 P3600  ;wait 7 pulses
 G0 Y0 X-100 F6000 ;move
 G4 P2000
-
 
 G0 Y0 X-110 F6000 ;push for select color
 ;G4 P700 ;caka 150ms
