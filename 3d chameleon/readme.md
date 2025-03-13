@@ -35,3 +35,4 @@ Rotate to the flat side. need all supports.
  Position of switch is in the middle on the left side. 
 
 ## Firmware files.
+All collected firmware files for 3D chameleon. I recomended version MK4.1. Also is here guide to burn firmware.
