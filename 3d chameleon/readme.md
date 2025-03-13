@@ -23,6 +23,7 @@
 - Extrude residual filament (prepare extruder for new color)
 - Load new color
 
-## Position of switch is in the middle on the left side. 
+## My STL files for using chameleon
+ Position of switch is in the middle on the left side. 
 
 ## Firmware files.
