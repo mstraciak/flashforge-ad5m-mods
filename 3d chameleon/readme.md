@@ -1,7 +1,28 @@
 # Files for 3D chameleon on Flashforge Adventurer 5M
+## Gcodes for Flashforge adventurer 5M
+### Start gcode:
+- Cleaning nozzle before leveling
+- Leveling heatbed
+- Purge filament from previous printing (if there is something forgetten)
+- Select color by orca slicer (if you chose different color for start printing than #1, it will auto select correct color)
+- Load filament into extruder
+- Purge nozzle before printing
 
-Start G-code, End G-code, and Change filament G-code for Flashforge Adventurer 5M with 3D chameleon.
+### End gcode:
+- Select "Unload filament" command in chameleon
+- Cut filament
+- Purge filament from printing (prepare for load in new printing)
+- Homing
+- Beep for notification of ended printing
 
-Position of switch is in the middle on the left side. 
+### Change gcode:
+- Retract filament for cutting (to minimize residual filament = less filaments for clean color)
+- Select correct color
+- Cut filament
+- Unload filament
+- Extrude residual filament (prepare extruder for new color)
+- Load new color
 
-Firmware files.
+## Position of switch is in the middle on the left side. 
+
+## Firmware files.
