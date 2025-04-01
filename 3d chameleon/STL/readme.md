@@ -1,6 +1,5 @@
-**ad5m-v5-4in1.stl:**\
-Rotate with holes to buildplate. support only on buildplate.
-
+**4tubes - guider.stl:**\
+Simple holder for 4 tubes.
 
 
 **chameleon-*.stl:**\
@@ -8,5 +7,3 @@ Print from PETG. part with oled mount print facing down, support only on buildpl
 
 
 
-**clipy-ad5m-body.stl:**\
-Rotate to the flat side. need all supports.
