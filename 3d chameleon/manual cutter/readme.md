@@ -34,12 +34,17 @@ Block for manual cutting. Position is front left corner.
 **ad5m cut-1to1input.stl:**\
 Main body for manual cutter. Print with support. After printing clean all holes, specialy for knife.
 
+**4tubes - guider.stl:**\
+Simple holder for 4 tubes.
+
+
+
 **Other parts:**\
--one piece from 9mm blade for utility knife
--spring from ball pen
--M3x20 
--M3x16 (as stop screw) 
--push-in fitting from festo for 4mm tube
+- one piece from 9mm blade for utility knife
+- spring from ball pen
+- M3x20 
+- M3x16 (as stop screw) 
+- push-in fitting from festo for 4mm tube
 
 
 
