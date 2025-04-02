@@ -4,7 +4,7 @@
 - Cleaning nozzle before leveling
 - Leveling heatbed
 - Purge filament from previous printing (if there is something forgetten)
-~~- Select color by orca slicer (if you chose different color for start printing than #1, it will auto select correct color)~~(not implemented)
+- ~~Select color by orca slicer (if you chose different color for start printing than #1, it will auto select correct color)~~(not implemented)
 - Load filament into extruder
 - Purge nozzle before printing
 
