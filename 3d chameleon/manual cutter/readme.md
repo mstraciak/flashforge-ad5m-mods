@@ -23,6 +23,8 @@
 - Extrude residual filament (prepare extruder for new color)
 - Load new color
 
+Note: With my gcodes was flushing volumes between each filament 215mm<sup>3</sup> (Multiplier 1.00). Its good value for start.
+
   
 ## My STL files for using chameleon
 **ad5m cut-arm-*.stl:**\
