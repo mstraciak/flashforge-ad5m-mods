@@ -1,4 +1,4 @@
-# Files for 3D chameleon on Flashforge Adventurer 5M <ins>WITHOUT</ins> servo cutter (manual cutting)
+# Files for 3D chameleon on Flashforge Adventurer 5M <ins>WITHOUT</ins> servo cutter (manual or semi-automatic cutting)
 ## Gcodes for Flashforge adventurer 5M
 ### Start gcode:
 - Cleaning nozzle before leveling
