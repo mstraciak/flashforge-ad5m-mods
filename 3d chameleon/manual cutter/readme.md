@@ -41,7 +41,7 @@ Simple holder for 4 tubes.
 4 in 1 ptfe adapter for using festo fittings.
 
 
-**Other parts:**\
+**Other parts:**
 - one piece from 9mm blade for utility knife
 - spring from ball pen
 - M3x20 
