@@ -37,6 +37,8 @@ Main body for manual cutter. Print with support. After printing clean all holes,
 **4tubes - guider.stl:**\
 Simple holder for 4 tubes.
 
+**ad5m 4n1 - body.stl:**\
+4 in 1 ptfe adapter for using festo fittings.
 
 
 **Other parts:**\
