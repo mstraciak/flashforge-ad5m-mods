@@ -29,11 +29,19 @@ G0 Y0 X-110 F6000 ;stlacenie tlacidla 3x
 G4 P3500  ;caka 7 pulzov
 G0 Y0 X-100 F6000 ;presun k tlacidlu
 G4 P1500
-G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber T0
-G4 P700 ;caka 150ms
-
-;G0 X-100 F6000
-
+G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber Tx
+{if initial_tool==0}
+G4 P600 ; dwell for .5 seconds - adjust this to match your machines single pulse time
+{endif}
+{if initial_tool==1}
+G4 P1200 ; dwell for 1.0 seconds - adjust this to match your machines two pulse time
+{endif}
+{if initial_tool==2}
+G4 P1700 ; dwell for 1.5 seconds - adjust this to match your machines three pulse time
+{endif}
+{if initial_tool==3}
+G4 P2200 ; dwell for 2.0 seconds - adjust this to match your machines four pulse time
+{endif}
 G0 Y0 X-100 F6000 ;presun k tlacidlu
 G4 P1000 ;caka 150ms
 
