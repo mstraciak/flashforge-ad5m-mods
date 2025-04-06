@@ -51,4 +51,7 @@ Simple holder for 4 tubes.
 - push-in fitting from festo for 4mm tube
 
 
+  ![screenshot](img/IMG20250402203225.jpg)
+
+
 
