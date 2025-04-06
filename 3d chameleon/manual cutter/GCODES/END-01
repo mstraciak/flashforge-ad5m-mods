@@ -2,6 +2,10 @@ G90
 M83
 G92 E0
 ;G0 E-70
+G0 Y-50 X-100 F6000 
+G0 Y-105 X-100 F6000 ;odstrihne filament
+G0 Y-105 X-80 F6000
+G0 Y0 X-100 F6000
 G0 Y0 X-110 F2400 ;stlacenie tlacidla
 G4 P3000  ;caka 6 pulzov pre strih filamentu
 G0 Y0 X-100 F2400 ;presun k tlacidlu
