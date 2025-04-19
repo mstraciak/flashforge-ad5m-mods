@@ -28,7 +28,7 @@ For fan use M3x16 screws with flat head, or use original screw (not needed tappe
 
 **Update 19.4.2025** - v4 - its fully function and its tested (load/unload filament) successfully, still untested in printing. still need small correction but now it is usable
 
-![](IMG_20250413_140854.jpg)
-![](IMG_20250413_141002.jpg)
-![](IMG_20250419_100951.jpg)
-![](ad5m - extruder.v4.stl)
+![photo](IMG_20250413_140854.jpg)
+![photo](IMG_20250413_141002.jpg)
+![photo](IMG_20250419_100951.jpg)
+![stl](ad5m - extruder.v4.stl)
