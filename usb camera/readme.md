@@ -6,5 +6,7 @@ How to connect any usb camera to camera port on LCD:
 3) just connect any usb camera to this new usb port and enable it on LCD.
    now you can use camera and usb stick at the same time.
    
-
+![photo](IMG_20240224_131420.jpg)
+![photo](IMG_20240224_133930.jpg)
+![photo](IMG_20240224_133954.jpg)
 
