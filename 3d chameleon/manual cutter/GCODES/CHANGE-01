@@ -3,30 +3,19 @@ M117 Unloading Tool T[previous_extruder]
 M83 ; turn relative distances for the extruder
 G92 E0
 
-G0 E-50 F500 ;retract for cut (47mm)    #1 ADJUST!!! WITH #2
-G0 Y0 X-100 F6000 
-G0 Y-105 X-100 F6000 ;odstrihne filament
-G0 Y-105 X-80 F6000
-G0 Y0 X-100 F6000 ;vrati sa ku tlacidlu
-G0 E55 F900     ;vytlaci odstrihnuty     #2 ADJUST!!!! WITH #1
+G0 E-45 F500 ;retract for cut =<46mm
+G0 Y0 X-100 F18000 
+G0 Y-105 X-100 F18000 ;odstrihne filament
+G0 E5 F900
+G0 Y-105 X-80 F18000
+G0 Y0 X-100 F18000 ;vrati sa ku tlacidlu
 
 G91 ; move to relative mode
 
-;M83
-;M117 Loading Tool T{next_extruder}
-
 {if previous_extruder>-1}
-;G1 E-25 F1500
-;M109 S165
-;G1 E-70 F700
-;M104 S[nozzle_temperature_initial_layer]
 {endif}
 
 {if previous_extruder>-1}
-;G92 E0
-;G91 ; move to relative mode
-;M82
-
 {endif}
 
 G0 X-10 F6000
@@ -49,17 +38,13 @@ G4 P2000
 {endif}
 
 G1 X-10 F6000 ;vysuva filament 
-G4 P5000      
+G4 P4900
 G1 X10 F6000
 G4 P300
 G1 X-10 F6000 ;zasuva filament 
-G4 P4400
-G1 E51 F1500 ;original value 78mm. ADJUST!!!! #3
+G4 P4500
+G1 E51 F1500 ;povodna hodnote 78mm
 G1 X10 F3000 ;presun k tlacidlu
-;G1 E35 F400  ;optional
-
-
-
 
 G92 E0
 G90 ; move back to absolute mode
