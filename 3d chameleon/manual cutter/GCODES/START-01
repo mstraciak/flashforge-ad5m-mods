@@ -29,7 +29,11 @@ G0 Y0 X-110 F6000 ;stlacenie tlacidla 3x
 G4 P3500  ;caka 7 pulzov
 G0 Y0 X-100 F6000 ;presun k tlacidlu
 G4 P1500
-G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber Tx
+;G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber T0
+;G4 P700 ;caka 150ms
+
+G0 Y0 X-110 F6000 ;push for select color
+;G4 P700 ;caka 150ms
 {if initial_tool==0}
 G4 P600 ; dwell for .5 seconds - adjust this to match your machines single pulse time
 {endif}
@@ -42,15 +46,58 @@ G4 P1700 ; dwell for 1.5 seconds - adjust this to match your machines three puls
 {if initial_tool==3}
 G4 P2200 ; dwell for 2.0 seconds - adjust this to match your machines four pulse time
 {endif}
+
 G0 Y0 X-100 F6000 ;presun k tlacidlu
 G4 P1000 ;caka 150ms
 
 G0 Y0 X-110 F6000 ;stlacenie tlacidla pre zasunutie filamentu T0
 G4 P4600        ;dlzka zasuvania
 G1 E78 F1500 ;povodna hodnote 78mm
+;G4 P2000
 G0 Y0 X-100 F3000 ;presun k tlacidlu
 G1 E35 F400
+;G4 P10000
 
+;zaciatok strihania
+;G0 Y-105 X-100 F6000 ;odstrihne filament
+;G0 Y-105 X-80 F6000
+;G1 E40 F400
+;G0 Y0 X-100 F6000 ;vrati sa ku tlacidlu
+;koniec strihania
+
+;test end gcode
+;G0 Y0 X-110 F2400 ;stlacenie tlacidla
+;G4 P3000  ;caka 6 pulzov pre strih filamentu
+;G0 Y0 X-100 F2400 ;presun k tlacidlu
+;G4 P200
+;G0 Y0 X-110 F2400 ;stlacenie tlacidla  
+;G4 P5000  ;dlzka vysuvania
+;G0 Y0 X-100 F2400 ;presun k tlacidlu
+
+;G4 P10000
+;end of test end gcode
+
+
+;zaciatok testu pre vysunutie filamentu T0 zasunutie T1
+;M106 S255
+;G1 E-25 F700
+;M109 S180
+;M107
+;G1 E-50 F700
+;M104 S[nozzle_temperature_initial_layer]
+;G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber filamentu T1
+;G4 P700
+;G0 Y0 X-100 F6000 ;vybraty filament T1
+;G4 P2000
+;G0 Y0 X-110 F6000 ;vysuva filament T1
+;G4 P3700
+;G0 Y0 X-100 F6000
+;G4 P300
+;G0 Y0 X-110 F6000 ;zasuva filament T1
+;G4 P1200
+;G1 E105 F1500 ;povodna hodnote 78mm
+;G0 Y0 X-100 F3000 ;presun k tlacidlu
+;G4 P8000
 
 
 G92 E0
