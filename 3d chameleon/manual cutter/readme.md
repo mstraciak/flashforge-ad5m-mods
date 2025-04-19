@@ -42,6 +42,9 @@ Simple holder for 4 tubes.
 **ad5m 4n1 - body.stl:**\
 4 in 1 ptfe adapter for using festo fittings. Alternatively you can use bambulab 4to1 ptfe adapter.
 
+**UPDATE 19.4.2025**
+Recomend using version 2 where is knife position lower 5mm. 
+
 
 **Other parts:**
 - one piece from 9mm blade for utility knife
