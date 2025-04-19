@@ -1,109 +1,37 @@
-G28 X0 Y0 Z0
-M190 S[bed_temperature_initial_layer_single]
-M109 S[nozzle_temperature_initial_layer]
-;part for clean nozzle
 G90
 M83
-G1 X0 Z0 F1200
-M106 S255
-G1 X15
-G1 X-15
-M140 S60
-M109 S120
-M106 S0
-G1 X-30
-G1 Z5 F1000
-;end of clean nozzle
-
-BED_MESH_CLEAR
-BED_MESH_CALIBRATE
-
-M109 S[nozzle_temperature_initial_layer]
-
-;M221 S95
-
 G92 E0
-G1 E50 ;vytlac ak nieco ostalo z predchadzajucej tlace.
+;G0 E-70
+G0 Y-50 X-100 F6000 
+G0 Y-105 X-100 F6000 ;odstrihne filament
+G0 Y-105 X-80 F6000
+G0 Y0 X-100 F6000
+G0 Y0 X-110 F2400 ;stlacenie tlacidla
+G4 P3000  ;caka 6 pulzov pre strih filamentu
+G0 Y0 X-100 F2400 ;presun k tlacidlu
+G4 P200
+G0 Y0 X-110 F2400 ;stlacenie tlacidla  
+G4 P5000  ;dlzka vysuvania
+G0 Y0 X-100 F2400 ;presun k tlacidlu
 
-G0 Y0 X-110 F6000 ;stlacenie tlacidla 3x 
-G4 P3500  ;caka 7 pulzov
-G0 Y0 X-100 F6000 ;presun k tlacidlu
-G4 P1500
-;G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber T0
-;G4 P700 ;caka 150ms
-
-G0 Y0 X-110 F6000 ;push for select color
-;G4 P700 ;caka 150ms
-{if initial_tool==0}
-G4 P600 ; dwell for .5 seconds - adjust this to match your machines single pulse time
-{endif}
-{if initial_tool==1}
-G4 P1200 ; dwell for 1.0 seconds - adjust this to match your machines two pulse time
-{endif}
-{if initial_tool==2}
-G4 P1700 ; dwell for 1.5 seconds - adjust this to match your machines three pulse time
-{endif}
-{if initial_tool==3}
-G4 P2200 ; dwell for 2.0 seconds - adjust this to match your machines four pulse time
-{endif}
-
-G0 Y0 X-100 F6000 ;presun k tlacidlu
-G4 P1000 ;caka 150ms
-
-G0 Y0 X-110 F6000 ;stlacenie tlacidla pre zasunutie filamentu T0
-G4 P4600        ;dlzka zasuvania
-G1 E78 F1500 ;povodna hodnote 78mm
+G0 Y0 X-110 F2400 ;stlacenie tlacidla  
+G4 P2500  ;vysunutie filamentu
+G0 Y0 X-100 F2400 ;presun k tlacidlu
+;G0 E55
 ;G4 P2000
-G0 Y0 X-100 F3000 ;presun k tlacidlu
-G1 E35 F400
-;G4 P10000
 
-;zaciatok strihania
-;G0 Y-105 X-100 F6000 ;odstrihne filament
-;G0 Y-105 X-80 F6000
-;G1 E40 F400
-;G0 Y0 X-100 F6000 ;vrati sa ku tlacidlu
-;koniec strihania
+;G92 E0
+G0 E65 F2000 ;vytlacenie zbytku
 
-;test end gcode
-;G0 Y0 X-110 F2400 ;stlacenie tlacidla
-;G4 P3000  ;caka 6 pulzov pre strih filamentu
-;G0 Y0 X-100 F2400 ;presun k tlacidlu
-;G4 P200
-;G0 Y0 X-110 F2400 ;stlacenie tlacidla  
-;G4 P5000  ;dlzka vysuvania
-;G0 Y0 X-100 F2400 ;presun k tlacidlu
-
-;G4 P10000
-;end of test end gcode
-
-
-;zaciatok testu pre vysunutie filamentu T0 zasunutie T1
-;M106 S255
-;G1 E-25 F700
-;M109 S180
-;M107
-;G1 E-50 F700
-;M104 S[nozzle_temperature_initial_layer]
-;G0 Y0 X-110 F6000 ;stlacenie tlacidla pre vyber filamentu T1
-;G4 P700
-;G0 Y0 X-100 F6000 ;vybraty filament T1
-;G4 P2000
-;G0 Y0 X-110 F6000 ;vysuva filament T1
-;G4 P3700
-;G0 Y0 X-100 F6000
-;G4 P300
-;G0 Y0 X-110 F6000 ;zasuva filament T1
-;G4 P1200
-;G1 E105 F1500 ;povodna hodnote 78mm
-;G0 Y0 X-100 F3000 ;presun k tlacidlu
-;G4 P8000
-
-
-G92 E0
-G1 X{first_layer_print_min[0]} Y{first_layer_print_min[1]-3} Z0.8 F6000.0 ; position 10mm down from the lower left of the first layer
-G1 X{first_layer_print_min[0]+30} Y{first_layer_print_min[1]-3} E30 F360.0 ; extrude 30mm of filament in the x direction
-G92 E0.0 ; reset extruder
-G1 E-0.5 F2100 ; small retraction
-G1 X{first_layer_print_min[0]+40} F6000.0 ; move an additional 10mm without extruding
-G92 E0.0 ; reset extruder
+M104 T0 S0
+M140 S0
+G28 X Y Z
+;M107 P102
+G91
+M18
+M84     ; disable motors
+M300 S3000 P200
+M300 S3000 P200
+M300 S0 P10
+M300 S3000 P200
+M300 S3000 P200
