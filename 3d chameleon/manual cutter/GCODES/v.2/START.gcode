@@ -1,0 +1,74 @@
+G28 X0 Y0 Z0
+M190 S[bed_temperature_initial_layer_single]
+M109 S[nozzle_temperature_initial_layer]
+part for clean nozzle
+G90
+M83
+G1 X0 Z0 F1200
+M106 S255
+G1 X15
+G1 X-15
+M140 S60
+M109 S120
+M106 S0
+G1 X-30
+G1 Z5 F1000
+;end of clean nozzle
+
+BED_MESH_CLEAR
+BED_MESH_CALIBRATE
+
+M109 S[nozzle_temperature_initial_layer]
+
+;;M221 S95
+
+G92 E0
+G1 E50 ;vytlac ak nieco ostalo z predchadzajucej tlace.
+
+G0 Y0 X-110 F6000 ;stlacenie tlacidla 3x 
+G4 P5000  ;caka 7 pulzov
+G0 Y0 X-100 F6000 ;presun k tlacidlu
+G4 P1000
+G0 Y0 X-110 F6000 ;stlacenie tlacidla 3x 
+G4 P3500  ;caka 7 pulzov
+G0 Y0 X-100 F6000 ;presun k tlacidlu
+G4 P1500
+
+G0 Y0 X-110 F6000 ;push for select color
+
+{if initial_tool==0}
+G4 P600 ; dwell for .5 seconds - adjust this to match your machines single pulse time
+{endif}
+{if initial_tool==1}
+G4 P1200 ; dwell for 1.0 seconds - adjust this to match your machines two pulse time
+{endif}
+{if initial_tool==2}
+G4 P1700 ; dwell for 1.5 seconds - adjust this to match your machines three pulse time
+{endif}
+{if initial_tool==3}
+G4 P2200 ; dwell for 2.0 seconds - adjust this to match your machines four pulse time
+{endif}
+
+G0 Y0 X-100 F6000 ;presun k tlacidlu
+G4 P1000 ;caka 150ms
+
+G0 Y0 X-110 F6000 ;stlacenie tlacidla pre zasunutie filamentu T0
+G4 P3800        ;dlzka zasuvania
+G1 E5 F1500 ;povodna hodnote 78mm
+G0 Y0 X-100 F3000 ;presun k tlacidlu
+
+;zaciatok debug pauzy
+;G4 P10000
+;koniec debug pauzy
+
+G1 E5 F400
+;G4 P10000
+
+
+G92 E0
+G1 X{first_layer_print_min[0]} Y{first_layer_print_min[1]-3} Z0.8 F6000.0 ; position 10mm down from the lower left of the first layer
+G1 X{first_layer_print_min[0]+30} Y{first_layer_print_min[1]-3} E30 F360.0 ; extrude 30mm of filament in the x direction
+G92 E0.0 ; reset extruder
+G1 E-0.5 F2100 ; small retraction
+G1 X{first_layer_print_min[0]+40} F6000.0 ; move an additional 10mm without extruding
+G92 E0.0 ; reset extruder
