@@ -47,7 +47,7 @@ Recomend using version 2 where is knife position lower 5mm (closer to the hotend
 
 **UPDATE 4.5.2025**
 Added version with better orientation. since this version i use bambulab filament hub 4to1 and ver.2 gcodes (start, end, change).
-Added gcode to macros.cfg, for cutting and unload filament with cancel printing.
+Added gcode to existing macro in file macros.cfg. For cutting and unload filament with cancel printing.
 
 
 **Other parts:**
