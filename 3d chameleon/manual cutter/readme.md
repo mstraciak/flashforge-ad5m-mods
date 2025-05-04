@@ -43,7 +43,10 @@ Simple holder for 4 tubes.
 4 in 1 ptfe adapter for using festo fittings. Alternatively you can use bambulab 4to1 ptfe adapter.
 
 **UPDATE 19.4.2025**
-Recomend using version 2 where is knife position lower 5mm. 
+Recomend using version 2 where is knife position lower 5mm (closer to the hotend) 
+
+**UPDATE 4.5.2025**
+Added version with better orientation. since this version i use bambulab filament hub 4to1 and ver.2 gcodes (start, end, change).
 
 
 **Other parts:**
