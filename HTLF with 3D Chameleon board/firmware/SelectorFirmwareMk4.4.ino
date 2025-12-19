@@ -69,7 +69,7 @@ const int stepsPerRev = 200;  //200*16 = 1rev = 5.75mm
 const int microSteps = 16;
 
 const int speedDelaySelector = 45; //delay for selector 60
-const int fastSpeed = 30;  //delay for extruder - 24us=feedrate 2245, 30us = feedrate 1796, 36us=feedrate 1496, 45us=feedrate 1197
+const int fastSpeed = 36;  //delay for extruder - 24us=feedrate 2245, 30us = feedrate 1796, 36us=feedrate 1496, 45us=feedrate 1197
 
 //const int defaultBackoff = 20; //30;
 
