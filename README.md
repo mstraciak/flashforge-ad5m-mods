@@ -2,7 +2,7 @@
 
 Here are my mods for flashforge adventurer 5m.
 1) 3D chameleon files for FF Ad5M
-2) Happy Turtle Lettuce Feeder with 3D chameleon board- HTLF for ANY 3D printer! (comming soon)
+2) Happy Turtle Lettuce Feeder with 3D chameleon board- HTLF for ANY 3D printer!
 3) Simple magnetic mount for LED bar
 4) Extruder housing. If you have broken or just need new housing, try my design. (recomend printing with SLA printer) 
 5) Start/end gcode with autoleveling at the begining of the print for orcaslicer 2.0.0.dev (usefull with sending files over wifi)  
