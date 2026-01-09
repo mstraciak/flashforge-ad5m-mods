@@ -149,7 +149,8 @@ void setup()
   
   prevCommand = 0;
   homeSelector();
-
+  rotateSelector(9600);//parking position
+      
 }
 
 int lastLoop = 0;
@@ -322,7 +323,9 @@ colors[0] = rgb_color(0, 0, 0);
    ///////////////////////////////////////////////    Homing
     homed=false;
     homeSelector();
-
+ 
+      rotateSelector(9600);//parking position
+      
     break;
     
   case 7: // unload current and park
@@ -369,10 +372,10 @@ colors[0] = rgb_color(0, 0, 0);
         break;
     } 
       rotateExtruder(counterclockwise);
-      //homed=false;
-      //homeSelector();
-    rotateSelector(9600);//parking position
-    
+      homed=false;
+      homeSelector();
+      rotateSelector(9600);//parking position
+      
     disconnectGillotine();
    ///////////////////////////////////////////////    Idle
     break;
@@ -382,6 +385,9 @@ colors[0] = rgb_color(0, 0, 0);
     delay(200);
 homed=false;
       homeSelector();
+      
+      rotateSelector(9600);//parking position
+      
    ///////////////////////////////////////////////    Idle
     break;
   }
@@ -591,6 +597,7 @@ void homeSelector()
 
  currentExtruder = 0;
  lastExtruder = -2;
+ 
     colors[0] = rgb_color(0, 0, 0);
     colors[1] = rgb_color(0, 0, 0);
     colors[2] = rgb_color(0, 0, 0);
