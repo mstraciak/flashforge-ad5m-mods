@@ -16,8 +16,8 @@
 - Removed support for other devices
 - Option to select extruder feedrate in code (1197,1496,1796,2245). Note: Original 3D chameleon uses feedrate 1500, so the setting for feedrate 1496 can be used).
 - After inserting the current filament into the extruder, the lobe elements move to a parking position where they do not press any filament.
+- Changed home and unload command: process move (unload-home/home and go to parking position)
 **The "guillotine" function for cutting filament using a servo motor is untouched.**
 
 **Planned changes:**
-- Add command to move to parking position
 - Code optimization
