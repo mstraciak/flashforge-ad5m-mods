@@ -5,8 +5,9 @@ Here are lines from my config files.
 
 
 ## Changes in printer.base.cfg:
-Old values begining with #.
-Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
+> [!NOTE]
+>Old values begining with #.
+>Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
 
 1. change in [stepper_x]
    
@@ -51,7 +52,9 @@ Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
 
 
 ## Changes in macros.cfg (note: i dont have PRO version):
-Old values begining with ;. Example: variable_custom_park_x    : 110 ;-105.0 (-105 is odl value, 110 is new value)
+> [!NOTE]
+>Old values begining with ;
+> Example: variable_custom_park_x    : 110 ;-105.0 (-105 is odl value, 110 is new value)
 
 1. change in [gcode_macro _CLIENT_VARIABLE]
    
@@ -110,7 +113,9 @@ Old values begining with ;. Example: variable_custom_park_x    : 110 ;-105.0 (-1
 
    ![img](img/orca_origin3.png)
 
-4. Dont forget change your start/end gcodes!!!
+
+> [!CAUTION]
+> Dont forget change your start/end gcodes!!!
 
 
 And now you should have origin in left front corner of the buildplate and you can use exclude area and primetower location where you want.
