@@ -2,17 +2,18 @@ G90
 M83
 G92 E0
 
-G0 Y-90 X-100 F6000 
-G0 Y-105 X-100 F2000 ;odstrihne filament
-;G0 Y-108 X-80 F6000
-G0 Y0 X-100 F6000
-G0 Y0 X-110 F2400 ;stlacenie tlacidla
+G0 Y20 X2 F6000 
+G0 Y2 X2 F2000 ;odstrihne filament
+G0 Y2 X30 F6000
+G0 Y25 X30 ;pravouhly pohyb aby nezachytil rameno
+G0 Y25 X2 F6000
+G0 Y25 X0 F2400 ;stlacenie tlacidla
 G4 P2700  ;caka 6 pulzov pre strih filamentu
-G0 Y0 X-100 F2400 ;presun k tlacidlu
+G0 Y25 X2 F2400 ;presun k tlacidlu
 G4 P2000
-G0 Y0 X-110 F2400 ;stlacenie tlacidla  
-G4 P3000  ;dlzka vysuvania
-G0 Y0 X-100 F2400 ;presun k tlacidlu
+G0 Y25 X0 F2400 ;stlacenie tlacidla  
+G4 P3500  ;dlzka vysuvania
+G0 Y25 X2 F2400 ;presun k tlacidlu
 
 G0 E85 F2000 ;vytlacenie zbytku
 
