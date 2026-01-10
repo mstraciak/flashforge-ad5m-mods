@@ -4,7 +4,7 @@ Steps here are for klipper_mod v00.06 beta.
 Here are lines from my config files.
 
 
-Changes in printer.base.cfg:
+## Changes in printer.base.cfg:
 Old values begining with #.
 Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
 
@@ -40,11 +40,11 @@ Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
    screw4: 16, 204 #-94, 94
 
 
-Changes in printer.cfg:
+## Changes in printer.cfg:
 1. there is normaly no changes
 
 
-Changes in macros.cfg (note: i dont have PRO version):
+## Changes in macros.cfg (note: i dont have PRO version):
 Old values begining with ;. Example: variable_custom_park_x    : 110 ;-105.0 (-105 is odl value, 110 is new value)
 
 1. change in [gcode_macro _CLIENT_VARIABLE]
@@ -90,7 +90,7 @@ Old values begining with ;. Example: variable_custom_park_x    : 110 ;-105.0 (-1
 
 
 
-Changes in OrcaSlicer:
+## Changes in OrcaSlicer:
 1. open settings for your printer profile
    ![img](img/orca_orgin1.png)
 
