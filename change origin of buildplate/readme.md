@@ -29,10 +29,10 @@ Here are lines from my config files.
    ```
 
 4. change in [homing_ocerride]
-   
+   ```
    #G1 X105 Y105 Z210 F1800
    G1 X215 Y215 Z210 F1800
-
+```
 5. change in [bed_mesh]
     ```
    mesh_min: 10, 10 #-100, -100            
