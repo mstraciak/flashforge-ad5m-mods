@@ -7,7 +7,7 @@ Here are lines from my config files.
 ## Changes in printer.base.cfg:
 > [!NOTE]
 >Old values begining with #.
->Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
+>Example: ``` position_endstop: 220 #110```  (110 is old value, 220 is new value)
 
 1. change in [stepper_x]
    ```
@@ -58,7 +58,7 @@ Here are lines from my config files.
 ## Changes in macros.cfg (note: i dont have PRO version):
 > [!NOTE]
 >Old values begining with ;
-> Example: variable_custom_park_x    : 110 ;-105.0 (-105 is odl value, 110 is new value)
+> Example: ```variable_custom_park_x    : 110 ;-105.0 ``` (-105 is odl value, 110 is new value)
 
 1. change in [gcode_macro _CLIENT_VARIABLE]
    ```
