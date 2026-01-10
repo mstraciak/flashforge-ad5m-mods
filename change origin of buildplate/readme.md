@@ -1,5 +1,6 @@
 After installing klipper_mod (from xblax) is origin (X0,Y0) at the center of the buildplate. Homing position is X110 and Y110.
-Here are steps, if you need origin in the front left corner (X0,Y0) and homing position at X220, Y220.
+Here are steps, if you need origin in the front left corner (X0,Y0) and homing position at X220, Y220. 
+Steps here are for klipper_mod v00.06 beta.
 
 Changes in printer.base.cfg:
 1. first step
