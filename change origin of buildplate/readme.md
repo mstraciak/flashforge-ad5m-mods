@@ -36,8 +36,12 @@ last step.
 Changes in OrcaSlicer:
 1. open settings for your printer profile
    ![img](img/orca_orgin1.png)
+
 2. Select "set" for printable area
+   
    ![img](img/orca_origin2.png)
 3. Change "origin" coordinates to X0 and Y0.
+
    ![img](img/orca_origin3.png)
+
 4. Dont forget change your start/end gcodes!!!
