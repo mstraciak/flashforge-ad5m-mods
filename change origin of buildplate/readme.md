@@ -10,11 +10,11 @@ Here are lines from my config files.
 >Example: position_endstop: 220 #110  (110 is old value, 220 is new value)
 
 1. change in [stepper_x]
-   
+   ```
    position_endstop: 220 #110
    position_max: 220.2 #110.1
    position_min: 0 #-110
-
+   ```
 2. change in [stepper_y]
    
    position_endstop: 220 #110
