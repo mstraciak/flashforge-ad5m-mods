@@ -34,9 +34,10 @@ Changes in macros.cfg/macros-pro.cfg:
 last step.
 
 Changes in OrcaSlicer:
-1. first step
-2. second step
-.
-.
-.
-last step.
+1. open settings for your printer profile
+   ![img](orca_orgin1.png)
+2. Select "set" for printable area
+   ![img](orca_origin2.png)
+3. Change "origin" coordinates to X0 and Y0.
+   ![img](orca_origin3.png)
+4. Dont forget change your start/end gcodes!!!
