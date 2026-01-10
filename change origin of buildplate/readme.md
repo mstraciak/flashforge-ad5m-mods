@@ -102,3 +102,6 @@ Old values begining with ;. Example: variable_custom_park_x    : 110 ;-105.0 (-1
    ![img](img/orca_origin3.png)
 
 4. Dont forget change your start/end gcodes!!!
+
+
+And now you should have origin in left front corner of the buildplate and you can use exclude area and primetower location where you want.
