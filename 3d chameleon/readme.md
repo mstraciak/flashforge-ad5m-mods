@@ -12,3 +12,6 @@ Print from PETG. part with oled mount print facing down, support only on buildpl
 All collected firmware files for 3D chameleon. I recommended version MK4.1. Also is here guide to burn firmware.
 
 ## Files for servo cutter and for manual cutter
+
+## Filament semi-automatic cutter
+cutter for the filament is [here](https://www.printables.com/model/1252462-update-semi-automatic-filament-cutter-for-flashfor)
