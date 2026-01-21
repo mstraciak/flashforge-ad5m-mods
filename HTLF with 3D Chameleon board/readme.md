@@ -22,4 +22,4 @@
 **Planned changes:**
 - Code optimization
 
-cutter for the filament is (here)[https://www.printables.com/model/1252462-update-semi-automatic-filament-cutter-for-flashfor]
+cutter for the filament is [here](https://www.printables.com/model/1252462-update-semi-automatic-filament-cutter-for-flashfor)
